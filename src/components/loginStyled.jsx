@@ -14,13 +14,4 @@ export const StyledLogin = styled.div`
   align-items: center;
   min-height: 100vh;
 
-  .alert {
-    /* Estilos para la alerta */
-  }
-
-  form {
-    /* Estilos para el formulario */
-  }
-
-  /* ... Otros estilos necesarios ... */
-`;
+  
