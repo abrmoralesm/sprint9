@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin-top: 1rem;
-  background-color: #341f63;
+  background-color: #29184e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,14 +11,18 @@ export const Container = styled.div`
   text-align: center;
   font-size: 0.9rem;
   padding: 4rem 4rem 3rem;
+  height: 10px;
+  border-top: 1px solid white;
 
   a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: white;
+    font-family: "Wix Madefor Display", sans-serif;
   }
   .Met {
     color: white;
+    font-family: "Wix Madefor Display", sans-serif;
   }
 
   p:nth-of-type(1) {
@@ -66,4 +70,8 @@ export const Container = styled.div`
       border-bottom: none;
     }
   }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 `;

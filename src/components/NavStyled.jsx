@@ -1,15 +1,37 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Nav = styled.nav`
-  background-color: #341f63;
+  background-color: #29184e;
   padding: 16px;
+  height: 15%;
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
 `;
 
 export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 16px;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -18,6 +40,13 @@ export const NavLink = styled(Link)`
   font-weight: bold;
   margin-right: 16px;
   text-decoration: none;
+  font-family: "Wix Madefor Display", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    display: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "block" : "none")};
+    margin: 8px 0;
+    font-size: 16px;
+  }
 `;
 
 export const LogoutButton = styled.button`
@@ -26,6 +55,12 @@ export const LogoutButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "block" : "none")};
+    margin: 8px 0;
+    font-size: 16px;
+  }
 `;
 
 export const RegisterLink = styled(Link)`
@@ -36,11 +71,118 @@ export const RegisterLink = styled(Link)`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-grow: 1;
+    justify-content: center;
+  }
+`;
+
+export const Logo = styled.img`
+  width: 80px;
+  height: 80px;
 `;
 
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-// Otros estilos que necesites...
+export const MobileMenuIcon = styled.div`
+  display: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #29184e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+
+  ${NavLink}, ${LogoutButton}, ${RegisterLink} {
+    color: #fff;
+    font-size: 18px;
+    margin: 16px 0;
+    text-decoration: none;
+    display: block;
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const MobileMenuOpen = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: ${slideIn} 0.3s ease-in-out;
+
+  ${NavLink}, ${LogoutButton}, ${RegisterLink} {
+    opacity: 0;
+    animation: ${fadeIn} 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
+
+export const MobileMenuClose = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: ${slideOut} 0.3s ease-in-out;
+
+  ${NavLink}, ${LogoutButton}, ${RegisterLink} {
+    opacity: 1;
+    animation: ${fadeOut} 0.3s ease-in-out forwards;
+    animation-delay: 0.1s;
+  }
+`;

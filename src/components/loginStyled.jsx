@@ -1,19 +1,105 @@
 import styled from "styled-components";
-import backgroundImage from "../assets/vang.jpeg";
 
-export const StyledLogin = styled.div`
+export const Container = styled.div`
   width: 100%;
-  max-width: 400px;
+  align-items: middle;
+  max-width: 20rem;
   margin: auto;
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-top: 5rem;
+
+  @media (max-width: 550px) {
+    margin-top: 5rem;
+    max-width: 20rem;
+  }
+`;
+
+export const Form = styled.form`
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 550px) {
+    padding: 3rem;
+    
+  }
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  color: #4a5568;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+`;
+
+export const Button = styled.button`
+  background-color: #4299e1;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #3182ce;
+  }
+`;
+
+export const ForgotPasswordLink = styled.a`
+  display: inline-block;
+  align-baseline: font-bold;
+  font-size: 0.875rem;
+  color: #4299e1;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #1a4c8b;
+  }
+`;
+
+export const Text = styled.p`
+  margin-top: 4rem;
+  color: white;
+  font-size: 0.875rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  justify-content: space-between;
+  padding: 0 0.75rem;
 
+  @media (max-width: 550px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
 
+export const GoogleButton = styled.button`
+  background-color: #f7fafc;
+  color: black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  border: 2px solid #e2e8f0;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 
+  &:hover {
+    background-color: #edf2f7;
+  }
+
+  @media (max-width: 550px) {
+    margin-top: 2rem;
+  }
 `;

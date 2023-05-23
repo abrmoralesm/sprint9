@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "../assets/vang.jpeg"
+import vang from "../assets/vang.jpeg";
 
 export const StyledObras = styled.div`
   width: 100%;
@@ -7,7 +7,9 @@ export const StyledObras = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${backgroundImage});
+
+  background-image: ${(props) => (props.notLogged ? `url(${vang})` : "none")};
+  background-color: ${(props) => (props.notLogged ? "none" : "red")};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

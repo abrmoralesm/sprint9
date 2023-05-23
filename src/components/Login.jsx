@@ -2,10 +2,16 @@ import React from "react";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import {Alert}from "./Alert"
-
-
-
+import { Alert } from "./Alert";
+import {
+  Container,
+  Form,
+  Input,
+  Button,
+  ForgotPasswordLink,
+  Text,
+  GoogleButton,
+} from "./loginStyled";
 
 function Login() {
   const [user, setUser] = useState({
@@ -14,11 +20,9 @@ function Login() {
   });
 
   const { login, loginWithGoogle, resetPassword } = useAuth();
-   const [error, setError] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
- 
 
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -29,9 +33,9 @@ function Login() {
       setError(error.message);
     }
   };
-   const handleChange = ({ target: { value, name } }) => 
-     setUser({ ...user, [name]: value });
-   
+
+  const handleChange = ({ target: { value, name } }) =>
+    setUser({ ...user, [name]: value });
 
   const handleGoogleSignin = async () => {
     try {
@@ -42,25 +46,21 @@ function Login() {
     }
   };
 
-  const handleResetPassword = async(e) =>{
+  const handleResetPassword = async (e) => {
     e.preventDefault();
-    if (!user.email)return setError("Please enter your password");
-    try{
-      await resetPassword(user.email)
-      setError("Check your email for reset link")
-    } catch(error){
-      setError(error.message)
-    
+    if (!user.email) return setError("Please enter your password");
+    try {
+      await resetPassword(user.email);
+      setError("Check your email for reset link");
+    } catch (error) {
+      setError(error.message);
     }
-  }
+  };
 
   return (
-    <div className='w-full align-middle max-w-xs m-auto mt-10'>
+    <Container>
       {error && <Alert message={error} />}
-      <form
-        onSubmit={handleSubmit}
-        className='bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4'
-      >
+      <Form onSubmit={handleSubmit}>
         <div className='mb-4'>
           <label
             htmlFor='email'
@@ -68,11 +68,10 @@ function Login() {
           >
             Email
           </label>
-          <input
+          <Input
             type='email'
             name='email'
             placeholder='your email'
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             id='email'
             onChange={handleChange}
           />
@@ -80,39 +79,27 @@ function Login() {
 
         <div className='mb-4'>
           <label htmlFor='password'>Password</label>
-          <input
+          <Input
             type='password'
             name='password'
             id='password'
             placeholder='******'
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             onChange={handleChange}
           />
         </div>
-        <div className='flex  items center justify-between'>
-          <button className='bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded  focus:outline-none focus:shadow-outline'>
-            Login
-          </button>
+        <div className='flex items center justify-between'>
+          <Button type='submit'>Login</Button>
 
-          <a
-            className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
-            href='#!'
-            onClick={handleResetPassword}
-          >
+          <ForgotPasswordLink href='#!' onClick={handleResetPassword}>
             Forgot Password
-          </a>
+          </ForgotPasswordLink>
         </div>
-      </form>
-      <p className='my4 text-white text-sm flex justify-between px-3'>
+      </Form>
+      <Text>
         Don't have an Account <Link to='/register'>Register</Link>
-      </p>
-      <button
-        onClick={handleGoogleSignin}
-        className='bg-slate-50 hover:bg-slate-200 text-black shadow-md rounded-xl border-2 border-gray-300 py-2 px-4 w-full'
-      >
-        Google Login
-      </button>
-    </div>
+      </Text>
+      <GoogleButton onClick={handleGoogleSignin}>Google Login</GoogleButton>
+    </Container>
   );
 }
 
