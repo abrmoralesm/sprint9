@@ -70,7 +70,7 @@ export const Container = styled.div`
       border-bottom: none;
     }
   }
-  position: fixed;
+
   bottom: 0;
   left: 0;
   width: 100%;

@@ -11,7 +11,6 @@ import {
   MobileMenuIcon,
   MobileMenu,
   CloseButton,
- 
 } from "./NavStyled";
 import logo from "../assets/logo.png";
 
@@ -21,28 +20,49 @@ function Navbar() {
 
   const handleLogout = () => {
     logout();
+    setMenuOpen(false); // Cerrar el menú después de hacer clic en Logout
+  };
+
+  const handleNavLinkClick = () => {
+    setMenuOpen(false); // Cerrar el menú después de hacer clic en un NavLink
   };
 
   return (
     <Nav>
       <NavContainer>
         <LogoContainer>
-          <NavLink to='/'>
+          <NavLink to='/' onClick={handleNavLinkClick}>
             <img src={logo} alt='Logo' width='80px' height='80px' />
           </NavLink>
-          <NavLink to='/Art'>Art</NavLink>
-          <NavLink to='/news'>News</NavLink>
+          <NavLink to='/Art' onClick={handleNavLinkClick}>
+            Art
+          </NavLink>
+          <NavLink to='/news' onClick={handleNavLinkClick}>
+            News
+          </NavLink>
         </LogoContainer>
 
         <ActionsContainer>
           <div>
             {user ? (
-              <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
+              <LogoutButton onClick={handleLogout} mobileMenuOpen={menuOpen}>
+                Logout
+              </LogoutButton>
             ) : (
-              <NavLink to='/login'>Login</NavLink>
+              <NavLink
+                to='/login'
+                onClick={handleNavLinkClick}
+                mobileMenuOpen={menuOpen}
+              >
+                Login
+              </NavLink>
             )}
           </div>
-          {!user && <RegisterLink to='/register'>Register</RegisterLink>}
+          {!user && (
+            <RegisterLink to='/register' mobileMenuOpen={menuOpen}>
+              Register
+            </RegisterLink>
+          )}
         </ActionsContainer>
 
         <MobileMenuIcon onClick={() => setMenuOpen(!menuOpen)}>
@@ -51,19 +71,35 @@ function Navbar() {
 
         {menuOpen ? (
           <MobileMenu>
-            <NavLink to='/'>
+            <NavLink to='/' onClick={handleNavLinkClick}>
               <img src={logo} alt='Logo' width='80px' height='80px' />
             </NavLink>
-            <NavLink to='/Art'>ART</NavLink>
-            <NavLink to='/news'>NEWS</NavLink>
+            <NavLink to='/Art' onClick={handleNavLinkClick}>
+              ART
+            </NavLink>
+            <NavLink to='/news' onClick={handleNavLinkClick}>
+              NEWS
+            </NavLink>
             <div>
               {user ? (
-                <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
+                <LogoutButton onClick={handleLogout} mobileMenuOpen={menuOpen}>
+                  Logout
+                </LogoutButton>
               ) : (
-                <NavLink to='/login'>Login</NavLink>
+                <NavLink
+                  to='/login'
+                  onClick={handleNavLinkClick}
+                  mobileMenuOpen={menuOpen}
+                >
+                  Login
+                </NavLink>
               )}
             </div>
-            {!user && <RegisterLink to='/register'>Register</RegisterLink>}
+            {!user && (
+              <RegisterLink to='/register' mobileMenuOpen={menuOpen}>
+                Register
+              </RegisterLink>
+            )}
             <CloseButton onClick={() => setMenuOpen(false)}>
               <i className='fas fa-times'></i>
             </CloseButton>
