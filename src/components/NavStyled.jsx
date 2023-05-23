@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  background-color: #333;
+  background-color: #341f63;
   padding: 16px;
 `;
 
@@ -32,6 +31,16 @@ export const LogoutButton = styled.button`
 export const RegisterLink = styled(Link)`
   color: #fff;
   text-decoration: none;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ActionsContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 // Otros estilos que necesites...

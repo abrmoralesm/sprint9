@@ -14,4 +14,6 @@ export const StyledLogin = styled.div`
   align-items: center;
   min-height: 100vh;
 
-  
+
+
+`;

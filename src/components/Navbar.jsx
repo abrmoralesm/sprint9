@@ -6,9 +6,10 @@ import {
   NavLink,
   LogoutButton,
   RegisterLink,
+  LogoContainer,
+  ActionsContainer, // Nuevo componente styled para contener los botones
 } from "./NavStyled";
-import logo from  "../assets/logo.png"
-
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const { user, logout } = useAuth();
@@ -20,16 +21,19 @@ function Navbar() {
   return (
     <Nav>
       <NavContainer>
-        <div>
+        <LogoContainer>
+          {" "}
+          {/* Contenedor para el logo */}
           <NavLink to='/'>
-            <img src={logo} alt='Logo' width='40px' height='40px' />{" "}
-            {/* Utiliza el logo como enlace al home */}
+            <img src={logo} alt='Logo' width='80px' height='80px' />
           </NavLink>
           <NavLink to='/obras'>Obras</NavLink>
           <NavLink to='/noticias'>Noticias</NavLink>
-        </div>
+        </LogoContainer>
 
-        <div>
+        <ActionsContainer>
+          {" "}
+          {/* Contenedor para los botones */}
           <div>
             {user ? (
               <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
@@ -38,7 +42,7 @@ function Navbar() {
             )}
           </div>
           {!user && <RegisterLink to='/register'>Registro</RegisterLink>}
-        </div>
+        </ActionsContainer>
       </NavContainer>
     </Nav>
   );

@@ -59,7 +59,7 @@ function Login() {
       {error && <Alert message={error} />}
       <form
         onSubmit={handleSubmit}
-        className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+        className='bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4'
       >
         <div className='mb-4'>
           <label
@@ -89,7 +89,7 @@ function Login() {
             onChange={handleChange}
           />
         </div>
-        <div className='flex items center justify-between'>
+        <div className='flex  items center justify-between'>
           <button className='bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded  focus:outline-none focus:shadow-outline'>
             Login
           </button>
@@ -108,7 +108,7 @@ function Login() {
       </p>
       <button
         onClick={handleGoogleSignin}
-        className='bg-slate-50 hover:bg-slate-200 text-black shadow-md rounded border-2 border-gray-300 py-2 px-4 w-full'
+        className='bg-slate-50 hover:bg-slate-200 text-black shadow-md rounded-xl border-2 border-gray-300 py-2 px-4 w-full'
       >
         Google Login
       </button>

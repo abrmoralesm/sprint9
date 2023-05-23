@@ -1,6 +1,7 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
+import Footer from "./components/Footer/Footer";
 import Login from './components/Login';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import Register from './components/Register';
@@ -35,6 +36,7 @@ function App() {
               <Route path='/register' element={<Register />} />
             </Routes>
           </div>
+          <Footer />
         </div>
       </>
     </AuthProvider>
