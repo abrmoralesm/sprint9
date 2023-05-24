@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import vang from "../assets/vang.jpeg"
 
 const GlobalStyle = createGlobalStyle`
+
   body {
     margin: 0;
     padding: 0;

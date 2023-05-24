@@ -43,7 +43,7 @@ export const NavLink = styled(Link)`
   font-family: "Wix Madefor Display", sans-serif;
 
   @media screen and (max-width: 768px) {
-    display: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "block" : "none")};
+    display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
     margin: 8px 0;
     font-size: 16px;
   }
@@ -57,7 +57,7 @@ export const LogoutButton = styled.button`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    display: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "block" : "none")};
+    display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
     margin: 8px 0;
     font-size: 16px;
   }
@@ -143,7 +143,7 @@ const fadeIn = keyframes`
   }
 `;
 
-export const MobileMenuOpen = styled.div`
+export const mobilemenuopen = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

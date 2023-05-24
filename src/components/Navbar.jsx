@@ -45,24 +45,14 @@ function Navbar() {
         <ActionsContainer>
           <div>
             {user ? (
-              <LogoutButton onClick={handleLogout} mobileMenuOpen={menuOpen}>
-                Logout
-              </LogoutButton>
+              <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
             ) : (
-              <NavLink
-                to='/login'
-                onClick={handleNavLinkClick}
-                mobileMenuOpen={menuOpen}
-              >
+              <NavLink to='/login' onClick={handleNavLinkClick}>
                 Login
               </NavLink>
             )}
           </div>
-          {!user && (
-            <RegisterLink to='/register' mobileMenuOpen={menuOpen}>
-              Register
-            </RegisterLink>
-          )}
+          {!user && <RegisterLink to='/register'>Register</RegisterLink>}
         </ActionsContainer>
 
         <MobileMenuIcon onClick={() => setMenuOpen(!menuOpen)}>
@@ -82,24 +72,14 @@ function Navbar() {
             </NavLink>
             <div>
               {user ? (
-                <LogoutButton onClick={handleLogout} mobileMenuOpen={menuOpen}>
-                  Logout
-                </LogoutButton>
+                <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
               ) : (
-                <NavLink
-                  to='/login'
-                  onClick={handleNavLinkClick}
-                  mobileMenuOpen={menuOpen}
-                >
+                <NavLink to='/login' onClick={handleNavLinkClick}>
                   Login
                 </NavLink>
               )}
             </div>
-            {!user && (
-              <RegisterLink to='/register' mobileMenuOpen={menuOpen}>
-                Register
-              </RegisterLink>
-            )}
+            {!user && <RegisterLink to='/register'>Register</RegisterLink>}
             <CloseButton onClick={() => setMenuOpen(false)}>
               <i className='fas fa-times'></i>
             </CloseButton>
