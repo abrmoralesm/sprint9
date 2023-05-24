@@ -36,11 +36,20 @@ export const NavContainer = styled.div`
 
 export const NavLink = styled(Link)`
   color: #fff;
-  font-size: 18px;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+
+  font-size: 1.5em;
   font-weight: bold;
   margin-right: 16px;
   text-decoration: none;
-  font-family: "Wix Madefor Display", sans-serif;
+  font-family: Roboto;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  :hover {
+    box-shadow: inset 100px 0 0 0 #ec012a;
+    color: white;
+    
+  }
 
   @media screen and (max-width: 768px) {
     display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
@@ -65,7 +74,25 @@ export const LogoutButton = styled.button`
 
 export const RegisterLink = styled(Link)`
   color: #fff;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 16px;
   text-decoration: none;
+  font-family: Roboto;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  :hover {
+    box-shadow: inset 100px 0 0 0 #ec012a;
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
+    margin: 8px 0;
+    font-size: 16px;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -86,6 +113,7 @@ export const Logo = styled.img`
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
+  font-size:12px;
 
   @media screen and (max-width: 768px) {
     display: none;

@@ -28,7 +28,9 @@ export const Column = styled.div`
 
     svg {
       margin-right: 10px;
+      
     }
+    :hover{color: #d83333;}
   }
 
   p {
