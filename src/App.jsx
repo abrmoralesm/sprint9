@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
 import Art from "./pages/Art";
+import DetallesObra from "./components/DetallesObra/DetallesObra";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import GlobalStyle from "./components/styledGlobal";
@@ -33,6 +34,7 @@ function App() {
               />
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
+              <Route path='/detallesobra/:id' element={<DetallesObra />} />
             </Routes>
           </div>
           <Footer />
