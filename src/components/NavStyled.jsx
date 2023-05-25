@@ -48,7 +48,6 @@ export const NavLink = styled(Link)`
   :hover {
     box-shadow: inset 100px 0 0 0 #ec012a;
     color: white;
-    
   }
 
   @media screen and (max-width: 768px) {
@@ -99,11 +98,12 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 568px) {
     flex-grow: 1;
-    justify-content: center;
   }
 `;
+
+
 
 export const Logo = styled.img`
   width: 80px;
@@ -113,7 +113,7 @@ export const Logo = styled.img`
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
-  font-size:12px;
+  font-size: 12px;
 
   @media screen and (max-width: 768px) {
     display: none;

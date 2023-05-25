@@ -8,32 +8,29 @@ import {
   DefaultImage,
 } from "./ObrasRandomStyled";
 
-
-
-
-
 const ObrasRandom = () => {
   const [paintings, setPaintings] = useState([]);
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchPaintings = async () => {
-      let fetchedPaintings = [];
-      let counter = 0;
+      if (paintings.length === 0) {
+        let fetchedPaintings = [];
+        let counter = 0;
 
-      while (fetchedPaintings.length < 5 && counter < 10) {
-        const data = await getRandomPaintings(4 - fetchedPaintings.length);
-        fetchedPaintings = [...fetchedPaintings, ...data];
-        counter++;
+        while (fetchedPaintings.length < 4 && counter < 10) {
+          const data = await getRandomPaintings(4 - fetchedPaintings.length);
+          fetchedPaintings = [...fetchedPaintings, ...data];
+          counter++;
+        }
+
+        setPaintings(fetchedPaintings);
       }
-
-      setPaintings(fetchedPaintings);
       setIsLoading(false);
     };
 
     fetchPaintings();
-  }, []);
+  }, [paintings]);
 
   const handleImageClick = async (objectId) => {
     const paintingDetails = await getImageDetails(objectId);
@@ -69,8 +66,8 @@ const ObrasRandom = () => {
               ))
             ) : (
               <DefaultImage
-                src='https://static.vecteezy.com/system/resources/previews/005/720/408/original/crossed-image-icon-picture-not-available-delete-picture-symbol-free-vector.jpg'
-                alt='Imagen predeterminada'
+                src="https://static.vecteezy.com/system/resources/previews/005/720/408/original/crossed-image-icon-picture-not-available-delete-picture-symbol-free-vector.jpg"
+                alt="Imagen predeterminada"
               />
             )}
           </ImageContainer>

@@ -5,11 +5,12 @@ export const Container = styled.div`
   align-items: middle;
   max-width: 20rem;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
 
   @media (max-width: 550px) {
-    margin-top: 5rem;
+    margin-top: 7rem;
     max-width: 20rem;
+    height: 100vh;
   }
 `;
 
