@@ -4,8 +4,8 @@ import { getImageDetails } from "../../MetropolitanApi";
 import {
   DetallesObraContainer,
   ObraImage,
-ImageContainer,
-InfoContent,
+  ImageContainer,
+  InfoContent,
   VolverButton,
   Titulo,
   InfoContainer,

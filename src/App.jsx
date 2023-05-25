@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
 import Art from "./pages/Art";
+import News from "./Pages/News"
 import DetallesObra from "./components/DetallesObra/DetallesObra";
 import "@fortawesome/fontawesome-free/css/all.css";
 
@@ -32,6 +33,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route path='/News' element={<News />} />
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='/detallesobra/:id' element={<DetallesObra />} />

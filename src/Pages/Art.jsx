@@ -1,18 +1,10 @@
-import ObrasRandom from "../components/Home/ObrasRandom/ObrasRandom";
+import ObrasRandom from "../components/ObrasRandom/ObrasRandom";
 import React from "react";
 
-
-
-
 const Art = () => {
-  
-
-  
-   
-
   return (
     <div>
-     <ObrasRandom />
+      <ObrasRandom />
     </div>
   );
 };

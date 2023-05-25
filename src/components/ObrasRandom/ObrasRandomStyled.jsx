@@ -10,6 +10,7 @@ const Container = styled.div`
   width: 100%;
   max-width: 1200px; /* Puedes ajustar el valor según tus necesidades */
   margin: 0 auto;
+ 
 `;
 
 const ImageContainer = styled.div`
@@ -17,12 +18,17 @@ const ImageContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   flex: 1;
+  
 `;
 
 const Image = styled.img`
   width: 300px;
   height: 300px;
   object-fit: cover;
+  padding: 0.4rem;
+  background-color: #d9cfcf;
+  &:hover {
+          filter: brightness(0.5);}
 `;
 
 const DefaultImage = styled.img`

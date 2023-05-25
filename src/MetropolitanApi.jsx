@@ -60,7 +60,7 @@ export const getRandomPaintings = async (count) => {
         return paintingData;
       } else {
         // Si no hay imagen, volver a intentar con otra pintura
-        return getRandomPainting();
+        return getRandomPaintings();
       }
     });
 
@@ -71,7 +71,6 @@ export const getRandomPaintings = async (count) => {
     return [];
   }
 };
-
 
 const getRandomIDs = (array, count) => {
   const shuffled = array.sort(() => 0.5 - Math.random());
