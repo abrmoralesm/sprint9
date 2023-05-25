@@ -66,6 +66,12 @@ export const Slider = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 6rem;
+
+  @media screen and (max-width: 680px) {
+  
+   padding-top: 100px;
+    
+  }
 `;
 
 export const Image = styled.img`

@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
+import logo from "../assets/logo.png";
+
+
 
 export const Nav = styled.nav`
   background-color: #29184e;
   padding: 16px;
   height: 15%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 568px) {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    background-image: url(${logo});
+    background-size: 40px; /* Cambiado de "cover" a "20px" para establecer el tamaño del logo */
+    background-position: left center;
   }
 `;
 
@@ -57,6 +63,7 @@ export const NavLink = styled(Link)`
   }
 `;
 
+
 export const LogoutButton = styled.button`
   color: #fff;
   margin-right: 16px;
@@ -64,10 +71,11 @@ export const LogoutButton = styled.button`
   border: none;
   cursor: pointer;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 568px) {
     display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
     margin: 8px 0;
     font-size: 16px;
+    
   }
 `;
 
@@ -98,12 +106,10 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     flex-grow: 1;
   }
 `;
-
-
 
 export const Logo = styled.img`
   width: 80px;
@@ -116,15 +122,17 @@ export const ActionsContainer = styled.div`
   font-size: 12px;
 
   @media screen and (max-width: 768px) {
-    display: none;
+   
   }
 `;
 
 export const MobileMenuIcon = styled.div`
   display: none;
-  color: #fff;
+  color:black;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px;
+  background-color: #e5dfdfca;
 
   @media screen and (max-width: 768px) {
     display: block;

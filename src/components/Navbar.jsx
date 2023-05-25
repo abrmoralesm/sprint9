@@ -11,7 +11,6 @@ import {
   MobileMenuIcon,
   MobileMenu,
   CloseButton,
-  
 } from "./NavStyled";
 import logo from "../assets/logo.png";
 
@@ -31,11 +30,11 @@ function Navbar() {
   return (
     <Nav>
       <NavContainer>
-      
         <LogoContainer>
           <NavLink to='/' onClick={handleNavLinkClick}>
             <img src={logo} alt='Logo' width='80px' height='80px' />
           </NavLink>
+
           <NavLink to='/Art' onClick={handleNavLinkClick}>
             Art
           </NavLink>
