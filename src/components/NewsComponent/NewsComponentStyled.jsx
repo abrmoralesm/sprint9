@@ -39,3 +39,8 @@ export const NewsContainer = styled.div`
     }
   }
 `;
+
+
+export const ContainerNews = styled.div`
+background-color: #fff;
+`;
