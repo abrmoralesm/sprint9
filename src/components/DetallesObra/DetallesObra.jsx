@@ -4,9 +4,11 @@ import { getImageDetails } from "../../MetropolitanApi";
 import {
   DetallesObraContainer,
   ObraImage,
-  CaracteristicasObra,
+ImageContainer,
+InfoContent,
   VolverButton,
   Titulo,
+  InfoContainer,
 } from "./DetallesObraEstilos";
 
 const DetallesObra = () => {
@@ -26,18 +28,22 @@ const DetallesObra = () => {
     <DetallesObraContainer>
       {obra ? (
         <>
-          <Titulo>
-           {obra.title}
-          </Titulo>
-          <ObraImage src={obra.primaryImageSmall} alt={obra.title} />
-          <CaracteristicasObra>
-            <h2>Características de la obra</h2>
-            <p>Título: {obra.title}</p>
-            <p>Autor: {obra.artistDisplayName}</p>
-            <p>Año: {obra.objectDate}</p>
-            <p>Técnica: {obra.medium}</p>
-            <p>Dimensiones: {obra.dimensions}</p>
-          </CaracteristicasObra>
+          <Titulo>{obra.title}</Titulo>
+          <InfoContainer>
+            <ImageContainer>
+              <ObraImage src={obra.primaryImageSmall} alt={obra.title} />
+            </ImageContainer>
+            <InfoContent>
+              <h2>Características de la obra</h2>
+              <p>Título: {obra.title}</p>
+              <p>
+                Autor: {obra.artistDisplayName} - {obra.artistDisplayBio}
+              </p>
+              <p>Año: {obra.objectDate}</p>
+              <p>Técnica: {obra.medium}</p>
+              <p>Dimensiones: {obra.dimensions}</p>
+            </InfoContent>
+          </InfoContainer>
           <VolverButton to='/Art'>Volver a Art</VolverButton>
         </>
       ) : (

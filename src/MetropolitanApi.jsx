@@ -53,7 +53,15 @@ export const getRandomPaintings = async (count) => {
       const paintingResponse = await axios.get(
         `${MET_API_BASE_URL}/objects/${objectID}`
       );
-      return paintingResponse.data;
+      const paintingData = paintingResponse.data;
+
+      // Verificar si la pintura tiene una imagen disponible
+      if (paintingData.primaryImage) {
+        return paintingData;
+      } else {
+        // Si no hay imagen, volver a intentar con otra pintura
+        return getRandomPainting();
+      }
     });
 
     const paintings = await Promise.all(promises);
@@ -63,6 +71,7 @@ export const getRandomPaintings = async (count) => {
     return [];
   }
 };
+
 
 const getRandomIDs = (array, count) => {
   const shuffled = array.sort(() => 0.5 - Math.random());
