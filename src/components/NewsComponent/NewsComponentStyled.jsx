@@ -43,4 +43,13 @@ export const NewsContainer = styled.div`
 
 export const ContainerNews = styled.div`
 background-color: #fff;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Puedes ajustar el valor según tus necesidades */
+  margin: 0 auto; 
+  gap: 3;
+  flex: 1;
 `;
