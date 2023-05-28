@@ -66,6 +66,7 @@ export const Slider = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 6rem;
+  margin-top: 2em;
 
   @media screen and (max-width: 680px) {
   

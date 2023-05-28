@@ -73,6 +73,7 @@ const ObrasRandom = () => {
           </ImageContainer>
         )}
       </Container>
+      
     </div>
   );
 };
