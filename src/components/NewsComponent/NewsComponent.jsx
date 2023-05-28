@@ -1,23 +1,29 @@
 import React from "react";
 import noticiasArte from "../../bd/noticiasArte";
-import { NewsContainer, ContainerNews } from "./NewsComponentStyled";
-
+import {
+  NewsContainer,
+  ContainerNews,
+  NewsItem,
+  NewsImage,
+  NewsContent,
+} from "./NewsComponentStyled";
 
 const NewsComponent = () => {
   return (
     <NewsContainer>
       <ContainerNews>
-        {noticiasArte.map((noticia) => (
-          <div key={noticia.id} className='news-item'>
-            <div className='news-image'>
+        {noticiasArte.map((noticia, index) => (
+          <NewsItem key={noticia.id} isFirst={index === 0}>
+            <NewsImage>
               <img src={noticia.imgUrl} alt={noticia.title} />
-            </div>
-            <div className='news-content'>
+            </NewsImage>
+            <NewsContent>
               <h2>{noticia.title}</h2>
               <h3>{noticia.subtitle}</h3>
               <p>{noticia.texto}</p>
-            </div>
-          </div>
+              <p>{noticia.categoria}</p>
+            </NewsContent>
+          </NewsItem>
         ))}
       </ContainerNews>
     </NewsContainer>

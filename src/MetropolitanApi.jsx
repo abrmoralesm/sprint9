@@ -38,7 +38,6 @@ export const getHighlightedImages = async () => {
   }
 };
 
-// Resto del código...
 
 export const getRandomPaintings = async (count) => {
   try {
@@ -46,26 +45,14 @@ export const getRandomPaintings = async (count) => {
       `${MET_API_BASE_URL}/search?medium=Paintings&hasImages=true&pageSize=${count}&q=*`
     );
     const { objectIDs } = response.data;
-
     const randomPaintingIDs = getRandomIDs(objectIDs, count);
-
-    const promises = randomPaintingIDs.map(async (objectID) => {
-      const paintingResponse = await axios.get(
-        `${MET_API_BASE_URL}/objects/${objectID}`
-      );
-      const paintingData = paintingResponse.data;
-
-      // Verificar si la pintura tiene una imagen disponible
-      if (paintingData.primaryImage) {
-        return paintingData;
-      } else {
-        // Si no hay imagen, volver a intentar con otra pintura
-        return getRandomPaintings();
-      }
-    });
-
-    const paintings = await Promise.all(promises);
-    return paintings;
+    const promises = randomPaintingIDs.map((objectID) =>
+      axios.get(`${MET_API_BASE_URL}/objects/${objectID}`)
+    );
+    const paintings = await axios.all(promises);
+    return paintings
+      .filter((painting) => painting.data.primaryImage)
+      .map((painting) => painting.data);
   } catch (error) {
     console.error("Error fetching random paintings:", error);
     return [];
@@ -104,7 +91,6 @@ export const getPaintingImages = async (count) => {
   }
 };
 
-// Función para obtener detalles de una imagen por su objectId
 export const getImageDetails = async (objectId) => {
   try {
     const response = await axios.get(
@@ -128,7 +114,7 @@ export const getDepartments = async () => {
     return [];
   }
 };
-
+/*
 export const getRandomImages = async (count) => {
   try {
     const response = await axios.get(
@@ -169,3 +155,12 @@ export const getDepartmentImages = async (departmentId, count) => {
     return [];
   }
 };
+*/
+
+
+
+
+
+
+
+

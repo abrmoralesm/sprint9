@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 2rem;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* Puedes ajustar el valor según tus necesidades */
+  max-width: 1200px;
   margin: 0 auto;
  
 `;
@@ -18,6 +18,11 @@ const ImageContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   flex: 1;
+
+  @media (max-width: 768px) {
+    padding-top: 5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
   
 `;
 

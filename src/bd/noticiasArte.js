@@ -6,8 +6,8 @@ const noticiasArte = [
       "https://blog-francia.com/wp-content/uploads/2012/03/Gioconda-espa%C3%B1ola-louvre.jpg",
     subtitle: "La famosa obra maestra del Renacimiento",
     texto:
-      "La Mona Lisa, también conocida como La Gioconda, es una de las pinturas más famosas del mundo. Fue creada por el artista renacentista Leonardo da Vinci en el siglo XVI. Se encuentra en el Museo del Louvre en París.",
-    categorías: "Pintura, Renacimiento, Arte",
+      "Lorem fistrum apetecan jarl caballo blanco caballo negroorl te voy a borrar el cerito hasta luego Lucas fistro papaar papaar va usté muy cargadoo. Te va a hasé pupitaa me cago en tus muelas hasta luego Lucas la caidita. A wan por la gloria de mi madre por la gloria de mi madre quietooor a peich de la pradera. Me cago en tus muelas te va a hasé pupitaa va usté muy cargadoo ese que llega ahorarr de la pradera. Ese hombree te va a hasé pupitaa amatomaa torpedo.",
+    categoria: "Pintura, Renacimiento, Arte",
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ const noticiasArte = [
       "https://blog-francia.com/wp-content/uploads/2012/03/Gioconda-espa%C3%B1ola-louvre.jpg",
     subtitle: "Una obra icónica del postimpresionismo",
     texto:
-      "La noche estrellada es una de las pinturas más conocidas del artista holandés Vincent van Gogh. Fue pintada en 1889 y representa el paisaje nocturno con un cielo estrellado sobre un pueblo. Actualmente se exhibe en el Museo de Arte Moderno de Nueva York.",
-    categorías: "Pintura, Postimpresionismo, Arte",
+      "Lorem fistrum apetecan jarl caballo blanco caballo negroorl te voy a borrar el cerito hasta luego Lucas fistro papaar papaar va usté muy cargadoo. Te va a hasé pupitaa me cago en tus muelas hasta luego Lucas la caidita. A wan por la gloria de mi madre por la gloria de mi madre quietooor a peich de la pradera. Me cago en tus muelas te va a hasé pupitaa va usté muy cargadoo ese que llega ahorarr de la pradera. Ese hombree te va a hasé pupitaa amatomaa torpedo.",
+    categoria: "Pintura, Postimpresionismo, Arte",
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const noticiasArte = [
       "https://blog-francia.com/wp-content/uploads/2012/03/Gioconda-espa%C3%B1ola-louvre.jpg",
     subtitle: "Un famoso fresco en la Capilla Sixtina",
     texto:
-      "La creación de Adán es una de las escenas más famosas del techo de la Capilla Sixtina en el Vaticano. Fue pintada por el renombrado artista renacentista Miguel Ángel entre 1508 y 1512. Representa el momento en que Dios da vida a Adán.",
-    categorías: "Pintura, Renacimiento, Arte",
+      "Lorem fistrum apetecan jarl caballo blanco caballo negroorl te voy a borrar el cerito hasta luego Lucas fistro papaar papaar va usté muy cargadoo. Te va a hasé pupitaa me cago en tus muelas hasta luego Lucas la caidita. A wan por la gloria de mi madre por la gloria de mi madre quietooor a peich de la pradera. Me cago en tus muelas te va a hasé pupitaa va usté muy cargadoo ese que llega ahorarr de la pradera. Ese hombree te va a hasé pupitaa amatomaa torpedo.",
+    categoria: "Pintura, Renacimiento, Arte",
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ const noticiasArte = [
       "https://blog-francia.com/wp-content/uploads/2012/03/Gioconda-espa%C3%B1ola-louvre.jpg",
     subtitle: "Una representación angustiante del expresionismo",
     texto:
-      "El grito es una de las pinturas más emblemáticas del artista noruego Edvard Munch. Fue creado en 1893 y muestra a una figura en un estado de profunda angustia. Es considerada una obra maestra del expresionismo y se encuentra en la Galería Nacional de Oslo.",
-    categorías: "Pintura, Expresionismo, Arte",
+      "Lorem fistrum apetecan jarl caballo blanco caballo negroorl te voy a borrar el cerito hasta luego Lucas fistro papaar papaar va usté muy cargadoo. Te va a hasé pupitaa me cago en tus muelas hasta luego Lucas la caidita. A wan por la gloria de mi madre por la gloria de mi madre quietooor a peich de la pradera. Me cago en tus muelas te va a hasé pupitaa va usté muy cargadoo ese que llega ahorarr de la pradera. Ese hombree te va a hasé pupitaa amatomaa torpedo.",
+    categoria: "Pintura, Expresionismo, Arte",
   },
 ];
 
