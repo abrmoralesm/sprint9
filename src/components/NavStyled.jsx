@@ -8,6 +8,7 @@ export const Nav = styled.nav`
   background-color: #29184e;
   padding: 16px;
   height: 15%;
+  border-bottom: 1px solid white;
 
   @media screen and (max-width: 568px) {
     position: fixed;
@@ -48,7 +49,7 @@ export const NavLink = styled(Link)`
   font-weight: bold;
   margin-right: 16px;
   text-decoration: none;
-  font-family: Roboto;
+  font-family: SFMOMADisplayRegular;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   :hover {
@@ -87,7 +88,7 @@ export const RegisterLink = styled(Link)`
   font-weight: bold;
   margin-right: 16px;
   text-decoration: none;
-  font-family: Roboto;
+  font-family: SFMOMADisplayRegular;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   :hover {

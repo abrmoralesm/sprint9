@@ -4,7 +4,7 @@ import {
   NewsContainer,
   ContainerNews,
   NewsItem,
-  NewsImage,
+  NewsImageWrapper,
   NewsContent,
 } from "./NewsComponentStyled";
 
@@ -14,9 +14,9 @@ const NewsComponent = () => {
       <ContainerNews>
         {noticiasArte.map((noticia, index) => (
           <NewsItem key={noticia.id} isFirst={index === 0}>
-            <NewsImage>
+            <NewsImageWrapper>
               <img src={noticia.imgUrl} alt={noticia.title} />
-            </NewsImage>
+            </NewsImageWrapper>
             <NewsContent>
               <h2>{noticia.title}</h2>
               <h3>{noticia.subtitle}</h3>

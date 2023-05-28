@@ -33,7 +33,7 @@ const noticiasArte = [
     id: 4,
     title: "El grito de Edvard Munch",
     imgUrl:
-      "https://blog-francia.com/wp-content/uploads/2012/03/Gioconda-espa%C3%B1ola-louvre.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png",
     subtitle: "Una representación angustiante del expresionismo",
     texto:
       "Lorem fistrum apetecan jarl caballo blanco caballo negroorl te voy a borrar el cerito hasta luego Lucas fistro papaar papaar va usté muy cargadoo. Te va a hasé pupitaa me cago en tus muelas hasta luego Lucas la caidita. A wan por la gloria de mi madre por la gloria de mi madre quietooor a peich de la pradera. Me cago en tus muelas te va a hasé pupitaa va usté muy cargadoo ese que llega ahorarr de la pradera. Ese hombree te va a hasé pupitaa amatomaa torpedo.",

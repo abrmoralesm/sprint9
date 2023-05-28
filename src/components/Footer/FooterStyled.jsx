@@ -13,6 +13,7 @@ export const Container = styled.div`
   padding: 4rem 4rem 3rem;
   height: 10px;
   border-top: 1px solid white;
+  
 
   a {
     text-decoration: none;
@@ -27,6 +28,7 @@ export const Container = styled.div`
 
   p:nth-of-type(1) {
     margin-bottom: 1.1rem;
+    font-family: SFMOMADisplayRegular;
   }
 
   ul {
