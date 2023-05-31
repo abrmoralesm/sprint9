@@ -20,15 +20,11 @@ function Navbar() {
 
   const handleLogout = () => {
     logout();
-    setMenuOpen(false); // Cerrar el menú después de hacer clic en Logout
+    setMenuOpen(false);
   };
 
   const handleNavLinkClick = () => {
-    setMenuOpen(false); // Cerrar el menú después de hacer clic en un NavLink
-  };
-
-  const handleRegisterLinkClick = () => {
-    setMenuOpen(false); // Cerrar el menú después de hacer clic en RegisterLink
+    setMenuOpen(false);
   };
 
   return (
@@ -58,7 +54,7 @@ function Navbar() {
             )}
           </div>
           {!user && (
-            <RegisterLink to='/register' onClick={handleRegisterLinkClick}>
+            <RegisterLink to='/register' onClick={handleNavLinkClick}>
               Register
             </RegisterLink>
           )}
@@ -89,7 +85,7 @@ function Navbar() {
               )}
             </div>
             {!user && (
-              <RegisterLink to='/register' onClick={handleRegisterLinkClick}>
+              <RegisterLink to='/register' onClick={handleNavLinkClick}>
                 Register
               </RegisterLink>
             )}
