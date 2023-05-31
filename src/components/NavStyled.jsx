@@ -2,15 +2,13 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import logo from "../assets/logo.png";
 
-
-
 export const Nav = styled.nav`
   background-color: #29184e;
   padding: 16px;
   height: 15%;
   border-bottom: 1px solid white;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +62,6 @@ export const NavLink = styled(Link)`
   }
 `;
 
-
 export const LogoutButton = styled.button`
   color: #fff;
   margin-right: 16px;
@@ -72,11 +69,10 @@ export const LogoutButton = styled.button`
   border: none;
   cursor: pointer;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     display: ${({ mobilemenuopen }) => (mobilemenuopen ? "block" : "none")};
     margin: 8px 0;
     font-size: 16px;
-    
   }
 `;
 
@@ -123,13 +119,12 @@ export const ActionsContainer = styled.div`
   font-size: 12px;
 
   @media screen and (max-width: 768px) {
-   
   }
 `;
 
 export const MobileMenuIcon = styled.div`
   display: none;
-  color:black;
+  color: black;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;

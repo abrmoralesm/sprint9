@@ -9,7 +9,7 @@ export const ColumnContainer = styled.div`
   @media (max-width: 568px) {
     flex-direction: column;
     align-items: center;
-    margin-top: 0rem; /* Ajustar el margen superior */
+    margin-top: 0rem;
   }
 `;
 
@@ -28,18 +28,20 @@ export const Column = styled.div`
 
     svg {
       margin-right: 10px;
-      
     }
-    :hover{color: #d83333;}
+
+    :hover {
+      color: #d83333;
+    }
   }
 
   p {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
-  @media (max-width: 468px) {
+  @media (max-width: 1024px) {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     h2 {
       font-size: 18px;
@@ -69,9 +71,7 @@ export const Slider = styled.div`
   margin-top: 2em;
 
   @media screen and (max-width: 680px) {
-  
-   padding-top: 100px;
-    
+    padding-top: 100px;
   }
 `;
 
@@ -81,12 +81,10 @@ export const Image = styled.img`
   object-fit: contain;
 
   @media (max-width: 768px) {
-    /* Estilos para dispositivos móviles */
     width: 100%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    /* Estilos para tablets */
     width: 100%;
   }
 `;

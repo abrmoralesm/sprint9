@@ -10,8 +10,13 @@ const Container = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  
- 
+
+  h1 {
+    color: #fff;
+    font-family: SFMOMADisplayRegular;
+    margin-bottom: 2rem;
+    text-align:center;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -43,4 +48,17 @@ const DefaultImage = styled.img`
   object-fit: cover;
 `;
 
-export { Container, ImageContainer, Image, DefaultImage };
+const LoadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  p{
+    color: #fff;
+    font-family: SFMOMADisplayRegular;
+
+  }
+`;
+
+export { Container, ImageContainer, Image, DefaultImage, LoadingContainer };

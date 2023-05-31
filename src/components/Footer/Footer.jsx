@@ -26,7 +26,7 @@ const Footer = () => (
           </a>
         </li>
         <li>
-          <a href='https://www.youtube.com/user/starwars'>
+          <a href='https://www.youtube.com/@metmuseum'>
             <FaYoutube />
           </a>
         </li>

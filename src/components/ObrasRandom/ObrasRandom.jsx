@@ -6,6 +6,7 @@ import {
   ImageContainer,
   Image,
   DefaultImage,
+  LoadingContainer,
 } from "./ObrasRandomStyled";
 
 const ObrasRandom = () => {
@@ -46,9 +47,13 @@ const ObrasRandom = () => {
   return (
     <div>
       <Container>
-        <h1>Mostrar 4 pinturas aleatorias</h1>
+        {!isLoading && <h1>Mostrando 4 pinturas aleatorias <br/> Click para ver información</h1>}
         {isLoading ? (
-          <p>Cargando...</p>
+          <LoadingContainer
+           
+          >
+            <p>Cargando...</p>
+          </LoadingContainer>
         ) : (
           <ImageContainer>
             {paintings.length > 0 ? (
@@ -73,7 +78,6 @@ const ObrasRandom = () => {
           </ImageContainer>
         )}
       </Container>
-      
     </div>
   );
 };

@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ColumnContainer, Column, Slider, Image,IconWrapper } from "./HomeStyled";
+import {
+  ColumnContainer,
+  Column,
+  Slider,
+  Image,
+  IconWrapper,
+} from "./HomeStyled";
 import {
   IoBookSharp,
   IoSearchCircleOutline,
@@ -28,9 +34,8 @@ const Home = () => {
       <Slider>
         {currentImageIndex === 0 && <Image src={foto1} alt='Imagen 1' />}
         {currentImageIndex === 1 && <Image src={foto2} alt='Imagen 2' />}
-     
       </Slider>
-      
+
       <ColumnContainer>
         <Column>
           <h2>

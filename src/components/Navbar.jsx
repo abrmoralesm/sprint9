@@ -27,6 +27,10 @@ function Navbar() {
     setMenuOpen(false); // Cerrar el menú después de hacer clic en un NavLink
   };
 
+  const handleRegisterLinkClick = () => {
+    setMenuOpen(false); // Cerrar el menú después de hacer clic en RegisterLink
+  };
+
   return (
     <Nav>
       <NavContainer>
@@ -53,7 +57,11 @@ function Navbar() {
               </NavLink>
             )}
           </div>
-          {!user && <RegisterLink to='/register'>Register</RegisterLink>}
+          {!user && (
+            <RegisterLink to='/register' onClick={handleRegisterLinkClick}>
+              Register
+            </RegisterLink>
+          )}
         </ActionsContainer>
 
         <MobileMenuIcon onClick={() => setMenuOpen(!menuOpen)}>
@@ -80,7 +88,11 @@ function Navbar() {
                 </NavLink>
               )}
             </div>
-            {!user && <RegisterLink to='/register'>Register</RegisterLink>}
+            {!user && (
+              <RegisterLink to='/register' onClick={handleRegisterLinkClick}>
+                Register
+              </RegisterLink>
+            )}
             <CloseButton onClick={() => setMenuOpen(false)}>
               <i className='fas fa-times'></i>
             </CloseButton>
