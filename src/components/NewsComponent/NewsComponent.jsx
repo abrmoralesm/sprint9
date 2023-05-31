@@ -6,6 +6,7 @@ import {
   NewsItem,
   NewsImageWrapper,
   NewsContent,
+  Categoria,
 } from "./NewsComponentStyled";
 
 const NewsComponent = () => {
@@ -21,7 +22,8 @@ const NewsComponent = () => {
               <h2>{noticia.title}</h2>
               <h3>{noticia.subtitle}</h3>
               <p>{noticia.texto}</p>
-              <p>{noticia.categoria}</p>
+              <br></br>
+              <Categoria>Categoría: {noticia.categoria}</Categoria>
             </NewsContent>
           </NewsItem>
         ))}

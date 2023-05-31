@@ -49,6 +49,12 @@ export const NewsItem = styled.div`
   }
 `;
 
+export const Categoria = styled.text`
+  font-size: 0.7rem;
+  font-family: SFMOMADisplayRegular;
+ 
+`;
+
 export const NewsImageWrapper = styled.div`
   flex: 1;
   display: flex;

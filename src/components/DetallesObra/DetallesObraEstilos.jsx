@@ -7,9 +7,11 @@ export const DetallesObraContainer = styled.div`
   align-items: center;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* Puedes ajustar el valor según tus necesidades */
-  margin: 0 auto; /* Centrar el contenedor horizontalmente */
-
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const Titulo = styled.div`
@@ -25,20 +27,31 @@ export const Titulo = styled.div`
   border: 2px solid grey;
   border-radius: 10px;
   box-shadow: 10px 10px 5px 0px rgba(110, 110, 110, 1);
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const InfoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  flex: 1;
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 export const ObraImage = styled.img`
@@ -51,10 +64,16 @@ export const ObraImage = styled.img`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+
+  @media (min-width: 768px) {
+    width: auto;
+    height: 80%;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 `;
 
 export const InfoContent = styled.div`
-  flex: 1;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -63,6 +82,11 @@ export const InfoContent = styled.div`
   padding: 2rem;
   text-align: center;
   font-family: "SFMOMADisplayRegular";
+
+  @media (min-width: 768px) {
+    text-align: left;
+    justify-content: flex-start;
+  }
 `;
 
 export const VolverButton = styled(Link)`
@@ -77,7 +101,7 @@ export const VolverButton = styled(Link)`
   cursor: pointer;
   font-family: "SFMOMADisplayRegular";
   :hover {
-    background-color: red;
+    background-color: #ff4646;
     box-shadow: 10px 10px 5px 0px #7976b0;
     transform: scale(1.1, 1.1);
   }

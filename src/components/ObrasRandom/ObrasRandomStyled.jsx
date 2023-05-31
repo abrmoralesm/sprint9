@@ -15,7 +15,11 @@ const Container = styled.div`
     color: #fff;
     font-family: SFMOMADisplayRegular;
     margin-bottom: 2rem;
-    text-align:center;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    padding-top: 8rem;
+    
   }
 `;
 

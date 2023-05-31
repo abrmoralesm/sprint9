@@ -15,7 +15,7 @@ export const Nav = styled.nav`
     right: 0;
     z-index: 999;
     background-image: url(${logo});
-    background-size: 40px; /* Cambiado de "cover" a "20px" para establecer el tamaño del logo */
+    background-size: 40px;
     background-position: left center;
   }
 `;
@@ -52,7 +52,7 @@ export const NavLink = styled(Link)`
 
   :hover {
     box-shadow: inset 100px 0 0 0 #ec012a;
-    color: white;
+    color: #ffffff;
   }
 
   @media screen and (max-width: 768px) {
@@ -89,7 +89,7 @@ export const RegisterLink = styled(Link)`
 
   :hover {
     box-shadow: inset 100px 0 0 0 #ec012a;
-    color: white;
+    color: #ffffff;
   }
 
   @media screen and (max-width: 768px) {
@@ -124,7 +124,7 @@ export const ActionsContainer = styled.div`
 
 export const MobileMenuIcon = styled.div`
   display: none;
-  color: black;
+  color: #000000;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
