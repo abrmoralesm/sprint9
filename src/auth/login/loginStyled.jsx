@@ -20,14 +20,12 @@ export const Form = styled.form`
   border-radius: 0.75rem;
   padding: 2rem;
 
-  
-  div{
-margin-bottom: 1rem;
+  div {
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 550px) {
     padding: 3rem;
-    
   }
 `;
 
@@ -105,7 +103,7 @@ export const GoogleButton = styled.button`
 
   &:hover {
     background-color: #3182ce;
-    color: #fff
+    color: #fff;
   }
 
   @media (max-width: 550px) {

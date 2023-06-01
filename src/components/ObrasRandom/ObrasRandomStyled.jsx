@@ -19,7 +19,6 @@ const Container = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 8rem;
-    
   }
 `;
 
@@ -33,7 +32,6 @@ const ImageContainer = styled.div`
     padding-top: 5rem;
     grid-template-columns: repeat(1, 1fr);
   }
-  
 `;
 
 const Image = styled.img`
@@ -43,7 +41,8 @@ const Image = styled.img`
   padding: 0.4rem;
   background-color: #d9cfcf;
   &:hover {
-          filter: brightness(0.5);}
+    filter: brightness(0.5);
+  }
 `;
 
 const DefaultImage = styled.img`
@@ -58,10 +57,9 @@ const LoadingContainer = styled.div`
   justify-content: center;
   min-height: 100vh;
 
-  p{
+  p {
     color: #fff;
     font-family: SFMOMADisplayRegular;
-
   }
 `;
 

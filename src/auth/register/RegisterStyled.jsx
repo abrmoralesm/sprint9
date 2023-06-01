@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-
-
 export const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
   @media (max-width: 580px) {
-   margin-top: 4rem;
+    margin-top: 4rem;
   }
 `;
 

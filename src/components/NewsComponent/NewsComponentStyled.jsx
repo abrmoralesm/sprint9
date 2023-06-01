@@ -89,7 +89,10 @@ export const NewsContent = styled.div`
   padding: 16px;
 
   h2 {
+
     font-size: 22px;
+    color: #3659AB;
+    font-weight: 800;
     margin-bottom: 10px;
     font-family: SFMOMADisplayRegular;
   }
