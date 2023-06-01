@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import vang from "../assets/vang.jpeg"
+
 
 const GlobalStyle = createGlobalStyle`
 

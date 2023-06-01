@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { Alert } from "./Alert";
+import { Alert } from "../alert/Alert";
 import {
   CenteredContainer,
   RegisterContainer,
@@ -13,7 +13,6 @@ import {
   RegisterText,
   LoginButton,
 } from "./RegisterStyled";
-
 
 const Register = () => {
   const [user, setUser] = useState({

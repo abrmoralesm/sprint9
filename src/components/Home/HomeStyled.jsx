@@ -13,6 +13,17 @@ export const ColumnContainer = styled.div`
   }
 `;
 
+export const Wellcome = styled.h1`
+  font-family: SFMOMADisplayRegular;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+`;
+
 export const Column = styled.div`
   flex: 1;
   padding: 0 20px;

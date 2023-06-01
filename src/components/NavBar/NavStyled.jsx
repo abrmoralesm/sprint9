@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 export const Nav = styled.nav`
   background-color: #29184e;
@@ -17,6 +17,7 @@ export const Nav = styled.nav`
     background-image: url(${logo});
     background-size: 40px;
     background-position: left center;
+    height: 90px; 
   }
 `;
 

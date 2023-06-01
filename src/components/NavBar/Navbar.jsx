@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../.././context/AuthContext";
 import {
   Nav,
   NavContainer,
@@ -12,7 +12,7 @@ import {
   MobileMenu,
   CloseButton,
 } from "./NavStyled";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,6 +41,7 @@ function Navbar() {
           <NavLink to='/news' onClick={handleNavLinkClick}>
             News
           </NavLink>
+          
         </LogoContainer>
 
         <ActionsContainer>

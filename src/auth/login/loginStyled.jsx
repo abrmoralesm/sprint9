@@ -19,7 +19,11 @@ export const Form = styled.form`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   padding: 2rem;
-  margin-bottom: 1rem;
+
+  
+  div{
+margin-bottom: 1rem;
+  }
 
   @media (max-width: 550px) {
     padding: 3rem;
@@ -32,6 +36,7 @@ export const Input = styled.input`
   padding: 0.5rem 0.75rem;
   border: 1px solid #e2e8f0;
   border-radius: 0.25rem;
+  font-family: SFMOMADisplayRegular;
   color: #4a5568;
   outline: none;
   transition: border-color 0.2s ease-in-out;
@@ -45,6 +50,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   background-color: #4299e1;
   color: white;
+  font-family: SFMOMADisplayRegular;
   font-size: 0.875rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -59,7 +65,7 @@ export const Button = styled.button`
 
 export const ForgotPasswordLink = styled.a`
   display: inline-block;
-  align-baseline: font-bold;
+  font-family: SFMOMADisplayRegular;
   font-size: 0.875rem;
   color: #4299e1;
   transition: color 0.2s ease-in-out;
@@ -71,6 +77,7 @@ export const ForgotPasswordLink = styled.a`
 
 export const Text = styled.p`
   margin-top: 4rem;
+  font-family: SFMOMADisplayRegular;
   color: white;
   font-size: 0.875rem;
   display: flex;
@@ -97,7 +104,8 @@ export const GoogleButton = styled.button`
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: #edf2f7;
+    background-color: #3182ce;
+    color: #fff
   }
 
   @media (max-width: 550px) {

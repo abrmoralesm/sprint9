@@ -1,17 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
-import Login from "./components/Login";
-import { ProtectedRoute } from "./components/ProtectedRoute";
-import Register from "./components/Register";
-import { AuthProvider } from "./context/AuthContext";
-import Navbar from "./components/Navbar";
-import Art from "./pages/Art";
-import News from "./Pages/News"
-import DetallesObra from "./components/DetallesObra/DetallesObra";
-import "@fortawesome/fontawesome-free/css/all.css";
 
+import Login from "./auth/login/Login";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import Register from "./auth/register/Register";
+import { AuthProvider } from "./context/AuthContext";
+import Header from "./components/Header/Header"
+import Principal from "./Pages/Home";
+import Art from "./pages/Art";
+import News from "./Pages/News";
+import DetallesObra from "./components/DetallesObra/DetallesObra";
+import Footer from "./components/Footer/Footer";
+import "@fortawesome/fontawesome-free/css/all.css";
 import GlobalStyle from "./components/styledGlobal";
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
     <AuthProvider>
       <>
         <GlobalStyle />
-        <div className='h-screen text-black flex flex-col'>
-          <Navbar />
+        <div>
+          <Header />
 
           <div className='flex-grow'>
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/' element={<Principal />} />
               <Route
                 path='/Art'
                 element={
@@ -34,6 +34,7 @@ function App() {
                 }
               />
               <Route path='/News' element={<News />} />
+
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='/detallesobra/:id' element={<DetallesObra />} />

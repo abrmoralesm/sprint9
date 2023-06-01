@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { Alert } from "./Alert";
+import { Alert } from "../alert/Alert";
 import {
   Container,
   Form,
@@ -61,10 +61,8 @@ function Login() {
     <Container>
       {error && <Alert message={error} />}
       <Form onSubmit={handleSubmit}>
-        <div className='mb-4'>
-          <label htmlFor='email'>
-            Email
-          </label>
+        <div>
+          <label htmlFor='email'>Email</label>
           <Input
             type='email'
             name='email'
@@ -74,7 +72,7 @@ function Login() {
           />
         </div>
 
-        <div className='mb-4'>
+        <div>
           <label htmlFor='password'>Password</label>
           <Input
             type='password'
