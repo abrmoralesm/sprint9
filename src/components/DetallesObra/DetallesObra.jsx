@@ -32,11 +32,11 @@ const ObraDetails = ({ id }) => {
   }, [id]);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <p>Error al cargar los detalles de la obra: {error}</p>;
+    return <p>Error loading work details: {error}</p>;
   }
 
   return (
@@ -47,17 +47,17 @@ const ObraDetails = ({ id }) => {
           <ObraImage src={obra.primaryImageSmall} alt={obra.title} />
         </ImageContainer>
         <InfoContent>
-          <h2>Características de la obra</h2>
-          <p>Título: {obra.title}</p>
+          <h2>Detaills of the work</h2>
+          <p>Title: {obra.title}</p>
           <p>
-            Autor: {obra.artistDisplayName} - {obra.artistDisplayBio}
+            Author: {obra.artistDisplayName} - {obra.artistDisplayBio}
           </p>
-          <p>Año: {obra.objectDate}</p>
-          <p>Técnica: {obra.medium}</p>
-          <p>Dimensiones: {obra.dimensions}</p>
+          <p>Year: {obra.objectDate}</p>
+          <p>Medium: {obra.medium}</p>
+          <p>Dimensions: {obra.dimensions}</p>
         </InfoContent>
       </InfoContainer>
-      <VolverButton to='/Art'>Volver a Art</VolverButton>
+      <VolverButton to='/Art'>Back to Art</VolverButton>
     </>
   );
 };

@@ -38,7 +38,7 @@ const RandomPaintings = ({ count }) => {
     <>
       {isLoading ? (
         <LoadingContainer>
-          <p>Cargando...</p>
+          <p>Loading...</p>
         </LoadingContainer>
       ) : (
         <ImageContainer>
@@ -74,7 +74,7 @@ const ObrasRandom = () => {
     <div>
       <Container>
         <h1>
-          Mostrando 4 pinturas aleatorias <br /> Click para ver información
+          Showing 4 random paintings <br /> Click to see information
         </h1>
         <RandomPaintings count={4} />
       </Container>
