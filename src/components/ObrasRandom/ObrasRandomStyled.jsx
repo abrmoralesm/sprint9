@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const Container = styled.div`
     padding-top: 8rem;
   }
 `;
+
 
 const ImageContainer = styled.div`
   display: grid;
@@ -63,4 +65,21 @@ const LoadingContainer = styled.div`
   }
 `;
 
-export { Container, ImageContainer, Image, DefaultImage, LoadingContainer };
+ const Refresh = styled(Link)`
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(110, 110, 110, 1);
+  cursor: pointer;
+  font-family: "SFMOMADisplayRegular";
+  :hover {
+    background-color: #ff4646;
+    box-shadow: 10px 10px 5px 0px #7976b0;
+    transform: scale(1.1, 1.1);
+  }
+`;
+export { Container, ImageContainer, Image, DefaultImage, LoadingContainer, Refresh };
